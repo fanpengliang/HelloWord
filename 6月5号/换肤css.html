@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+      <!--定义外部加载类的样式表-->
+    <link rel="stylesheet"  id="olink">
+   
+</head>
+<body>
+    <input type="button" value="红">
+    <input type="button" value="橙">
+    <input type="button" value="绿">
+</body>
+<script>
+    window.onload=function(){
+        //命名 变量 用驼峰  o 带表 单个  a 代表多个
+        var oBtn=document.getElementsByTagName("input")[0];
+        var oBtn1=document.getElementsByTagName("input")[1];
+        var oBtn2=document.getElementsByTagName("input")[2];
+        var oLink=document.getElementById("olink");
+        
+        oBtn.onclick=function(){
+            oLink.href="red.css"
+        };
+        oBtn1.onclick=function(){
+            oLink.href="orong.css";
+          };
+        oBtn2.onclick=function(){
+            oLink.href="green.css";
+        };
+    }
+</script>

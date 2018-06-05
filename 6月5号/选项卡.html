@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+     div div{
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;
+            display: none;
+            background:darksalmon;
+        }
+
+        .ys {
+            background-color: rgb(29, 189, 128);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="o1">
+        <input type="button" class="ys" value="Team Lukkade">
+        <input type="button"  value="Team Bee">
+        <input type="button"  value="Team Cris">
+        <div style="display: block">Team Lukkade></div>
+        <div>Team Bee</div>
+        <div>Team Cris</div>
+
+    </div>
+</body>
+<script>
+    function tab(Id) {
+        var oBox = document.querySelector(Id);
+        var aBtn = oBox.getElementsByTagName('input');
+        var aDiv = oBox.getElementsByTagName('div');
+
+        for (var i = 0; i < aBtn.length; i++) {
+            aBtn[i].index = i;
+            aBtn[i].onclick = function () {
+                for (var i = 0; i < aBtn.length; i++) {
+                    aBtn[i].className = '';
+                    aDiv[i].style.display = "none";
+
+                }
+                 aDiv[this.index].style.display="block";
+                 this.className='ys';
+
+            }
+
+        }
+   }
+
+      window.onload=function(){
+            tab('#o1');
+
+      }
+
+</script>
+
+
+
+
+
+</html>

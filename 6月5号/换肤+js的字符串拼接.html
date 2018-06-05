@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link id="xy">
+</head>
+<style>
+    .red {
+        background-color: aquamarine;
+
+    }
+
+    .blue {
+
+        background-color: blueviolet;
+    }
+</style>
+
+
+<body>
+    <input type="button" value="青色">
+    <input type="button" value="紫色">
+
+
+
+
+</body>
+<script>
+
+           var name = Gina;
+           alert("The Face Thailand All Star winner Is"+name);
+
+
+
+    window.onload = function () {
+        var obtn = document.getElementsByTagName("input")[0];
+        var obt1 = document.getElementsByTagName("input")[1];
+        var otn = document.getElementById("xy");
+
+      
+        obt1.onclick= function(){
+          document.body.className='blue'
+
+        }
+
+         obtn.onclick= function(){
+          document.body.className='red'
+
+        }
+    }
+
+
+
+</script>
+
+
+</html>
